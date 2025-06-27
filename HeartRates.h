@@ -5,18 +5,19 @@
 class HeartRates
 {
 public:
-    HeartRates(int, int, int);
-    void setFirstName();
-    void setLastName();
-    void setMonth();
-    void setDay();
-    void setYear();
+    HeartRates(std::string, std::string, int, int, int);
+    void setFirstName(std::string);
+    void setLastName(std::string);
+    void setBirthDate(int, int, int);
+    void setMonth(int);
+    void setDay(int);
+    void setYear(int);
     std::string getFirstName() const;
     std::string getLastName() const;
     int getMonth() const;
     int getDay() const;
     int getYear() const;
-    int getAge();
+    int getAge() const;
     int getMaximumHeartRate();
     int getTargetHeartRate();
 private:
