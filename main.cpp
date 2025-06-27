@@ -18,9 +18,9 @@ int main()
     cout << "First Name: "<< hRates.getFirstName() << endl;
     cout << "Last Name: "<< hRates.getLastName() << endl;
     cout << "Date of Birth: " << hRates.getMonth() << "/" << hRates.getDay() << "/" << hRates.getYear() << endl;
-    hRates.getAge();
-    // cout << "Age: " << endl;
-    cout << "Maximum Heart Rate: " << hRates.getMaximumHeartRate() << endl;
+    int age = hRates.getAge();
+    cout << "Age: " << age << endl;
+    cout << "Maximum Heart Rate: " << hRates.getMaximumHeartRate(age) << endl;
     cout << "Target Heart Rate: " << endl;
     return 0;
 }

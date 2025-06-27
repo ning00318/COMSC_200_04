@@ -54,29 +54,27 @@ int HeartRates::getYear() const
 {
     return year;
 }
-void HeartRates::getAge() const
+int HeartRates::getAge() const
 {
-    int month, day, year;
+    int currentMonth, currentDay, currentYear;
     int age;
     cout << "Please enter today's month, day, and year:" << endl;
-    cin >> month >> day >> year;
-    year -= getYear();
-    if (month <= getMonth() && day < getDay())
-        age = year - 1;
-    else
-        age = year;
-    cout << "Age: " << age << endl;
-}
-int HeartRates::getMaximumHeartRate()
-{
-    int maxRate;
-    maxRate = 220;
+    cin >> currentMonth >> currentDay >> currentYear;
     
+    age = currentYear - getYear();
+    if (currentMonth <= getMonth() && currentDay < getDay())
+        age--;
+    
+    return age;
+}
+int HeartRates::getMaximumHeartRate(int patientAge)
+{
+    int maxRate = 220 - patientAge;   
     return maxRate;
 }
 int HeartRates::getTargetHeartRate()
 {
     int lowRate, hightRate;
-    lowRate = getMaximumHeartRate() * 0.5;
-    hightRate = getMaximumHeartRate() * 0.85;
+    //lowRate = getMaximumHeartRate() * 0.5;
+    //hightRate = getMaximumHeartRate() * 0.85;
 }

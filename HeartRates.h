@@ -17,8 +17,8 @@ public:
     int getMonth() const;
     int getDay() const;
     int getYear() const;
-    void getAge() const;
-    int getMaximumHeartRate();
+    int getAge() const;
+    int getMaximumHeartRate(int);
     int getTargetHeartRate();
 private:
     std::string firstName;
