@@ -17,7 +17,7 @@ public:
     int getMonth() const;
     int getDay() const;
     int getYear() const;
-    int getAge() const;
+    void getAge() const;
     int getMaximumHeartRate();
     int getTargetHeartRate();
 private:
