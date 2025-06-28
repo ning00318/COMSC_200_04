@@ -1,6 +1,6 @@
 #include<string>
-#ifndef HEARTRATES.H
-#define HEARTRATES.H
+#ifndef HEARTRATES_H
+#define HEARTRATES_H
 
 class HeartRates
 {
@@ -8,7 +8,7 @@ public:
     HeartRates(std::string, std::string, int, int, int);
     void setFirstName(std::string);
     void setLastName(std::string);
-    void setBirthDate(int, int, int);
+    void setDateOfBirth(int, int, int);
     void setMonth(int);
     void setDay(int);
     void setYear(int);
@@ -19,7 +19,7 @@ public:
     int getYear() const;
     int getAge() const;
     int getMaximumHeartRate(int);
-    int getTargetHeartRate();
+    std::string getTargetHeartRate(int);
 private:
     std::string firstName;
     std::string lastName;
